@@ -2,7 +2,9 @@
 
 This is a personal blog project that I've been working on. It's a personal project that I created to replace my previous notion blog and website. I also plan to make it more boilerplate like so that anyone can use it as an easy setup to start blogging!
 
-</center> ![personal-blog-demo](https://github.com/adriantzkok/personal-blog/blob/main/personal-blog.gif "Personal Blog Demo") </center>
+<div style="text-align: center;">
+    <img src="https://github.com/adriantzkok/personal-blog/blob/main/personal-blog.gif" alt="Personal Blog Demo">
+</div>
 ---
 
 ## About 📝
