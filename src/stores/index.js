@@ -5,7 +5,8 @@ import { fetchBlogs } from '@/api/db/queries'
 export const useBlogStore = defineStore('blog_posts', {
   state: () => ({
     blog_posts: [],
-    about_me: about_me
+    about_me: about_me,
+    name: 'Adrian Kok'
   }),
 
   getters: {
