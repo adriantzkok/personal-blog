@@ -65,6 +65,8 @@ VUE_APP_SUPABASE_KEY=
 ## 3. Run Locally
 ```npm run dev```
 
+---
+
 ## Future Improvements Planned 🔧
 - Improved error handling
 - Enhanced reactivity during loading
