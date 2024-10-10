@@ -1,6 +1,6 @@
 # Easy Personal Blog 😊
 
-This is a personal blog project that I've been working on. It serves as an easy-to-use setup that anyone can refer to when looking to start a blog.
+This is a personal blog project that I've been working on. It's a personal project that I created to replace my previous notion blog and website. I also plan to make it more boilerplate like so that anyone can use it as an easy setup to start blogging!
 
 ---
 
@@ -21,6 +21,7 @@ The **BLOG_POSTS** table stores essential metadata for blog posts.
 - **topic**: `string`
 - **tags**: `array`
 - **data_generated**: `TIMESTAMP`
+- **image_url** `string`
 
 2. Posts Table
 
@@ -28,9 +29,12 @@ The **POSTS** table contains the actual content of the blog posts. Content shoul
 
 
 - **blog_post**: `int` (Foreign Key)
+- **preface**: `string`
 - **content**: `string`
 
 This structure allows you to manage both the metadata and content of your blog posts effectively.
+
+You'll need to setup this database on Supabase. You'll also need to setup a storage account to store images and generate the corresponding image_urls to store in the **BLOG_POSTS** database
 
 ---
 
