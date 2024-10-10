@@ -1,7 +1,7 @@
 # Easy Personal Blog 😊
 
 This is a personal blog project that I've been working on. It's a personal project that I created to replace my previous notion blog and website. I also plan to make it more boilerplate like so that anyone can use it as an easy setup to start blogging!
-
+![personal-blog-demo](https://github.com/adriantzkok/personal-blog/blob/main/personal-blog.gif "Personal Blog Demo")
 ---
 
 ## About 📝
