@@ -7,6 +7,7 @@ This is a personal blog project that I've been working on. It's a personal proje
 <div style="text-align: center;">
     <img src="https://github.com/adriantzkok/personal-blog/blob/main/personal-blog.gif" alt="Personal Blog Demo">
 </div>
+
 ---
 
 ## About 📝
