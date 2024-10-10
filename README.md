@@ -37,7 +37,7 @@ The **POSTS** table contains the actual content of the blog posts. Content shoul
 
 This structure allows you to manage both the metadata and content of your blog posts effectively.
 
-You'll need to setup this database on Supabase. You'll also need to setup a storage account to store images and generate the corresponding image_urls to store in the **BLOG_POSTS** database
+You'll need to setup this database on Supabase. You'll also need to setup a storage account to store images and generate the corresponding image_urls to store in the **BLOG_POSTS** database.
 
 ---
 
