@@ -51,12 +51,6 @@ h1 a {
   margin: 0;
 }
 
-h1 a:hover,
-h1 a:active,
-h1 a.router-link-active {
-  border-color: transparent;
-}
-
 header nav {
   width: 100%;
   margin-left: 2rem;
