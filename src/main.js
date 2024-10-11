@@ -21,7 +21,7 @@ app.use(
   VueGtag,
   {
     pageTrackerScreenviewEnabled: true,
-    config: { id: `${import.meta.env.VITE_GOOGLE_ANALYTICS_ID}` }
+    config: { id: import.meta.env.VITE_GOOGLE_ANALYTICS_ID }
   },
   router
 )
