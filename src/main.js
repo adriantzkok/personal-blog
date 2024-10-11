@@ -22,8 +22,7 @@ app.use(
   {
     pageTrackerScreenviewEnabled: true,
     config: { id: import.meta.env.VITE_GOOGLE_ANALYTICS_ID },
-    appName: 'adrian-blog',
-    page_location: 'https://adrian-blog.vercel.app/'
+    appName: 'adrian-blog'
   },
   router
 )
