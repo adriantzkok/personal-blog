@@ -42,7 +42,6 @@ export default {
       await this.getBlogPosts()
       try {
         if (this.filter) {
-          console.log('filtering')
           this.posts = this.filteredBlogPosts(this.filter)
         } else {
           this.posts = this.blog_posts

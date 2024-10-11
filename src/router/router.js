@@ -8,22 +8,25 @@ import AllPage from '@/components/pages/AllPage.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', component: HomePage },
+    { path: '/', component: HomePage, name: 'home' },
     {
       path: '/about',
-      component: AboutPage
+      component: AboutPage,
+      name: 'about'
     },
     {
       path: '/blog',
-      component: AllPage
+      component: AllPage,
+      name: 'blog'
     },
     {
       path: '/blogpost/:id',
       component: BlogPost,
-      props: true
+      props: true,
+      name: 'path'
       //   children: [{ path: 'contact', component: ContactCoach }]
     },
-    { path: '/admin', component: AdminPage }
+    { path: '/admin', component: AdminPage, name: 'admin' }
   ]
 })
 
