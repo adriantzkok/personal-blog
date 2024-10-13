@@ -67,7 +67,7 @@ export default {
 
 .blog-posts-row {
   display: flex;
-  overflow: auto;
+  overflow: scroll;
   white-space: nowrap;
   column-gap: 0.5rem;
   row-gap: 0.5rem;
