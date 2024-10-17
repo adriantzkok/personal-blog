@@ -54,6 +54,7 @@ export default {
   background: rgb(249, 248, 248);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin: 1rem;
+  min-width: 300px;
 }
 
 .card:hover {
