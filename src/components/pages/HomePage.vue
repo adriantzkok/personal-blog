@@ -4,14 +4,18 @@
     <base-content>
       <posts-container title="All Posts" layout="blog-posts-row"></posts-container>
     </base-content>
+    <base-content></base-content>
     <base-content>
-      <posts-container title="Learning of the Week" filter="LotW"></posts-container>
+      <posts-container
+        title="Learning of the Week"
+        filter='{"tags": ["Sept"], "topic": ["Weekly Learnings"]}'
+      ></posts-container>
     </base-content>
   </div>
 </template>
 
 <script>
-import PostsContainer from '../layouts/HomePage/PostsContainer.vue'
+import PostsContainer from '../layouts/PostsContainer.vue'
 
 export default {
   components: { PostsContainer }

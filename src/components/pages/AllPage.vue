@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import PostsContainer from '../layouts/HomePage/PostsContainer.vue'
+import PostsContainer from '../layouts/PostsContainer.vue'
 
 export default {
   components: { PostsContainer }

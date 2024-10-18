@@ -47,7 +47,7 @@ export default {
           this.posts = this.blog_posts
         }
       } catch (error) {
-        console.error('Error')
+        console.error('Error', error)
       }
     }
   },
