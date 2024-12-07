@@ -1,5 +1,5 @@
 <template>
-  <h2 class="postscontainertitle">{{ title }}</h2>
+  <h2>{{ title }}</h2>
   <div :class="layout">
     <blog-card
       v-for="card in posts"
@@ -38,7 +38,7 @@ export default {
     ...mapState(useBlogStore, ['blog_posts', 'getBlogPosts', 'filteredBlogPosts'])
   },
   methods: {
-    async getPosts() {
+    async getTravelPosts() {
       await this.getBlogPosts()
       try {
         if (this.filter) {
@@ -52,7 +52,7 @@ export default {
     }
   },
   created() {
-    this.getPosts()
+    this.getTravelPosts()
   }
 }
 </script>
@@ -73,12 +73,6 @@ export default {
   row-gap: 0.5rem;
 }
 
-h2 {
-  font-size: 1.8rem;
-  letter-spacing: 1.5px;
-  font-weight: 400;
-}
-
 @media (max-width: 768px) {
   .blog-posts-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -88,12 +82,6 @@ h2 {
 @media (max-width: 480px) {
   .blog-posts-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .postscontainertitle {
-    text-align: center;
   }
 }
 </style>
