@@ -1,9 +1,7 @@
 <template>
   <div class="content">
     <page-image></page-image>
-    <base-content>
-      <posts-container title="All Blog Posts"></posts-container>
-    </base-content>
+    <posts-container title="All Blog Posts" :filtertoggle="true"></posts-container>
   </div>
 </template>
 

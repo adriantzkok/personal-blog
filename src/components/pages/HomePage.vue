@@ -2,11 +2,19 @@
   <div class="content">
     <page-image></page-image>
     <base-content>
-      <posts-container title="All Posts" layout="blog-posts-row"></posts-container>
+      <posts-container
+        title="All Posts"
+        layout="blog-posts-row"
+        :filtertoggle="false"
+      ></posts-container>
     </base-content>
     <base-content></base-content>
     <base-content>
-      <posts-container title="Learning of the Week" filter='{"title": ["LotW"]}'></posts-container>
+      <posts-container
+        title="Learning of the Week"
+        filter='{"title": ["LotW"]}'
+        :filtertoggle="false"
+      ></posts-container>
     </base-content>
   </div>
 </template>

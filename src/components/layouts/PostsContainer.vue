@@ -1,31 +1,39 @@
 <template>
-  <h2 class="postscontainertitle">{{ title }}</h2>
-  <div>
-    <input class="styled-input" placeholder="Search..." v-model="filter.title" />
-  </div>
-  <div :class="layout">
-    <blog-card
-      v-for="card in posts"
-      :key="card.id"
-      :id="card.id"
-      :title="card.title"
-      :topic="card.topic"
-      :img-url="card.IMAGE_URL"
-      :areas="card.tags"
-    ></blog-card>
-  </div>
+  <base-content>
+    <div class="postheading">
+      <h2 class="postscontainertitle">{{ title }}</h2>
+      <div class="postfilter" v-if="filtertoggle">
+        <input class="styled-input" placeholder="Search Posts..." v-model="filter.title" />
+      </div>
+    </div>
+  </base-content>
+  <base-content>
+    <div :class="layout">
+      <blog-card
+        v-for="card in posts"
+        :key="card.id"
+        :id="card.id"
+        :title="card.title"
+        :topic="card.topic"
+        :img-url="card.IMAGE_URL"
+        :areas="card.tags"
+      ></blog-card>
+    </div>
+  </base-content>
 </template>
 
 <script>
 import BlogCard from '@/components/ui/BlogCard.vue'
 import { mapState } from 'pinia'
 import { useBlogStore } from '@/stores'
+import BaseContent from '../ui/BaseContent.vue'
 
 export default {
   props: {
     title: {
       required: true
     },
+    filtertoggle: { required: true },
     layout: {
       default: 'blog-posts-grid'
     }
@@ -36,23 +44,13 @@ export default {
       filter: { title: '', topic: '', tags: '' }
     }
   },
-  components: { BlogCard },
+  components: { BlogCard, BaseContent },
   computed: {
     ...mapState(useBlogStore, ['blog_posts', 'getBlogPosts', 'filteredBlogPosts'])
   },
   methods: {
     async getPosts() {
       await this.getBlogPosts()
-<<<<<<< HEAD:src/components/layouts/PostsContainer.vue
-      try {
-        if (this.filter) {
-          this.posts = this.filteredBlogPosts(this.filter)
-        } else {
-          this.posts = this.blog_posts
-        }
-      } catch (error) {
-        console.error('Error', error)
-=======
       this.posts = this.blog_posts
     },
     filterPosts() {
@@ -68,7 +66,6 @@ export default {
       deep: true,
       handler() {
         this.filterPosts()
->>>>>>> main:src/components/layouts/HomePage/PostsContainer.vue
       }
     }
   },
@@ -79,6 +76,17 @@ export default {
 </script>
 
 <style scoped>
+.postheading {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.postfilter {
+  display: flex;
+}
+
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
