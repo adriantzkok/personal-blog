@@ -30,14 +30,20 @@ export const useBlogStore = defineStore('blog_posts', {
       return (filter) => {
         filter = JSON.parse(filter)
 
-        let filteredPosts = state.blog_posts
-        // '{"tags": ["Sept"], "title": ["Weekly Learnings"]}'
+        let blogPosts = state.blog_posts
+
         for (const [key, value] of Object.entries(filter)) {
-          console.log(key, value)
-          filteredPosts = filteredPosts.filter((post) => value.some((el) => post[key].includes(el)))
-          console.log('d', filteredPosts)
+          if (key == 'topic') {
+            blogPosts = blogPosts.filter((post) => value.includes(post.topic))
+          } else if (key == 'tags') {
+            blogPosts = blogPosts.filter((post) =>
+              value.every((filtertag) => post.tags.includes(filtertag))
+            )
+          } else {
+            blogPosts = blogPosts.filter((post) => post.title.includes(value[0]))
+          }
         }
-        return filteredPosts
+        return blogPosts
       }
     }
   },

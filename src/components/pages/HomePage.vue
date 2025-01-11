@@ -6,10 +6,7 @@
     </base-content>
     <base-content></base-content>
     <base-content>
-      <posts-container
-        title="Learning of the Week"
-        filter='{"tags": ["Sept"], "topic": ["Weekly Learnings"]}'
-      ></posts-container>
+      <posts-container title="Learning of the Week" filter='{"title": ["LotW"]}'></posts-container>
     </base-content>
   </div>
 </template>
