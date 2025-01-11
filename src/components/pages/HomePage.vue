@@ -5,7 +5,11 @@
       <posts-container title="All Posts" layout="blog-posts-row"></posts-container>
     </base-content>
     <base-content>
-      <posts-container title="Learning of the Week" filter="LotW"></posts-container>
+      <posts-container
+        title="Learning of the Week"
+        filter="LotW"
+        layout="blog-posts-row"
+      ></posts-container>
     </base-content>
   </div>
 </template>
