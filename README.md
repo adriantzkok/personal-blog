@@ -12,7 +12,7 @@ This is a personal blog project that I've been working on. It's a personal proje
 
 ## About 📝
 
-This project is built using the **Vue** framework for the frontend. For the backend, I utilized **Supabase** and created an API on top of Supabase's existing functionality to fit the project's needs. To simplify writing, I've chosen **Markdown** as the primary format for blog posts, which will be rendered on the frontend using markdown-it.
+This project is built using the **Vue** framework for the frontend. For the backend, I utilized **Supabase** and created an API on top of Supabase's existing functionality to fit the project's needs. To simplify writing, I've chosen **Markdown** as the primary format for blog posts, which will be rendered on the frontend using markdown-it. Analytics are powered using **Google Analytics**
 
 ## How to Use It 🚀
 
