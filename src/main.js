@@ -6,7 +6,6 @@ import router from './router/router'
 
 import PageImage from './components/ui/PageImage.vue'
 import BaseContent from './components/ui/BaseContent.vue'
-
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import { BiLinkedin, BiGithub } from 'oh-vue-icons/icons'
 

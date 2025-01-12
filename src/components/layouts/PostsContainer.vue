@@ -85,6 +85,11 @@ export default {
 
 .postfilter {
   display: flex;
+  column-gap: 10%;
+  height: 70%;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .blog-posts-grid {
@@ -113,6 +118,11 @@ export default {
 .styled-input:focus {
   border-color: #007bff; /* Change to your desired focus color */
   outline: none;
+}
+
+.multi-select-tags {
+  width: 20rem;
+  z-index: 10000;
 }
 
 h2 {
