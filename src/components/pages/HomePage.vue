@@ -8,9 +8,10 @@
     ></posts-container>
     <posts-container
       title="Learning of the Week"
-      filter='{"title": ["LotW"]}'
       layout="blog-posts-row"
       :filtertoggle="true"
+      titlefilter="LotW"
+      tagfilter="Tech,Learning"
     ></posts-container>
   </div>
 </template>

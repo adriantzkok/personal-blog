@@ -34,6 +34,9 @@ export default {
       required: true
     },
     filtertoggle: { required: true },
+    titlefilter: { default: '' },
+    topicfilter: { default: '' },
+    tagfilter: { default: '' },
     layout: {
       default: 'blog-posts-grid'
     }
@@ -41,7 +44,12 @@ export default {
   data() {
     return {
       posts: [],
-      filter: { title: '', topic: '', tags: '' }
+      filter: { title: '', topic: '', tags: '' },
+      adminfilter: {
+        title: this.titlefilter,
+        topic: this.topicfilter,
+        tag: this.tagfilter.split(',')
+      }
     }
   },
   components: { BlogCard, BaseContent },
@@ -51,7 +59,9 @@ export default {
   methods: {
     async getPosts() {
       await this.getBlogPosts()
-      this.posts = this.blog_posts
+      if (this.titlefilter || this.topicfilter || this.tagfilter.length > 0) {
+        this.posts = this.filteredBlogPosts(this.adminfilter)
+      } else this.posts = this.blog_posts
     },
     filterPosts() {
       if (this.filter.title || this.filter.topic || this.filter.tags) {
