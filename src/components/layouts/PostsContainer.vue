@@ -91,6 +91,8 @@ export default {
   width: 100%;
   align-content: center;
   justify-content: space-between;
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .postfilter {
@@ -100,6 +102,7 @@ export default {
   align-content: center;
   margin-top: auto;
   margin-bottom: auto;
+  align-items: center; /* Center vertically */
 }
 
 .blog-posts-grid {
@@ -156,6 +159,25 @@ h2 {
 @media (max-width: 600px) {
   .postscontainertitle {
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .postheading {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Align items to the start */
+    justify-content: center;
+  }
+
+  .postfilter {
+    width: 100%; /* Full width for the input on mobile */
+    margin-top: 10px; /* Space between title and input */
+    justify-content: center;
+  }
+
+  .postscontainertitle {
+    text-align: center; /* Center title */
+    width: 100%; /* Full width */
   }
 }
 </style>
