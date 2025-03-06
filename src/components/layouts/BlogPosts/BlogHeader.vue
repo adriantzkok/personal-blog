@@ -1,8 +1,8 @@
 <template>
   <div class="blog-background">
     <div class="blog-header">
-      <h1>{{ header }}</h1>
-      <p>{{ date }}</p>
+      <h1 v-if="header">{{ header }}</h1>
+      <p v-if="date">{{ date }}</p>
     </div>
     <hr />
     <slot></slot>
@@ -29,7 +29,6 @@ export default {
         this.header = post.title
 
         this.date = post.created_at.split('T')[0]
-        console.log(this.date)
       } catch (err) {
         this.error = 'Failed to load post content.'
         console.error(err)
